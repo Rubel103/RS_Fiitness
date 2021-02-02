@@ -44,12 +44,22 @@
 
     }
 
+    .left img {
+        width: 90px;
+        filter: invert(100%);
+    }
+
+    .left div {
+        text-align: center;
+    }
+
     .mid {
         border: 2px solid rgb(16, 165, 16);
-        
+
         display: block;
-        width: 40%;
-        margin: 22px 390px; /* if we want to move any div using margin: 2px auto then we havw to follow three conditions 1. display:block ; 2. width: according to you. 3. margin auto*/
+        width: 70%;
+        margin: 12px 341px;
+        /* if we want to move any div using margin: 2px auto then we havw to follow three conditions 1. display:block ; 2. width: according to you. 3. margin auto*/
         padding: 4px;
 
     }
@@ -61,11 +71,42 @@
         /*2.*/
         right: 40px;
         /*3.*/
-        top: 20px; /*these three point is used for move this div to the right*/
+        top: 20px;
+        /*these three point is used for move this div to the right*/
 
         border: 2px solid yellow;
         margin: 2px 2px;
         padding: 4px;
+    }
+
+    .navbar {}
+
+    .navbar li {
+
+        font-size: 20px;
+
+        display: inline-block;
+        /*at first navbar wasnot in a line when inline-block is uesd then it stands in a line and als we can add aits height and width*/
+    }
+
+    .navbar li a {
+        padding: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar li a:hover,
+    .navbar li a:active {
+
+        color: blue;
+    }
+
+    .btn {
+        margin: 0px 9px;
+        padding: 4px 5px;
+        color: white;
+        border-radius: 10px;
+        background-color: black;
     }
 </style>
 
@@ -76,27 +117,38 @@
 
 
 
-        <header class="header">
-            <!-- leftbox for logo -->
-            <div class="left">
-                <p>Left</p>
+    <header class="header">
+        <!-- leftbox for logo -->
+        <div class="left">
+            <!-- <p>Left</p> -->
+            <img src="img/logo.png" alt="Logo">
+            <div>RS Fitness</div>
 
-            </div>
-
-
-            <!-- mid box for navigation -->
-            <div class="mid">
-                <p>Mid</p>
-
-            </div>
+        </div>
 
 
-            <!-- right box for buttons -->
-            <div class="right">
-                <p>Right</p>
+        <!-- mid box for navigation -->
+        <div class="mid">
+            <ul class="navbar">
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">About Us</a></li>
+                <li> <a href="#">Fitness Calculator</a></li>
+                <li> <a href="#">Schedule</a></li>
+                <li> <a href="#">Contact Us</a></li>
+            </ul>
+            <!-- <p>Mid</p> -->
 
-            </div>
-        </header>
+        </div>
+
+
+        <!-- right box for buttons -->
+        <div class="right">
+            <!-- <p>Right</p> -->
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+
+        </div>
+    </header>
     <!-- </div> -->
 </body>
 
