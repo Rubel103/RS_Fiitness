@@ -7,12 +7,14 @@
     <title>RS Fitness</title>
 </head>
 <link rel="stylesheet" href="CSS/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
 <style>
     body {
         margin: 0px;
         padding: 0px;
         color: white;
-
+        font-family: 'Yusei Magic', sans-serif;
         background-image: url(img/2.jpg);
         background-repeat: no-repeat;
         background-size: 100%;
@@ -37,29 +39,36 @@
         /*inline-block helps to custom width*/
         position: absolute;
         left: 40px;
-        top: 20px;
-        border: 2px solid red;
+        top: 5px;
+        /* border: 2px solid red; */
         margin: 2px 2px;
         padding: 4px;
 
     }
 
     .left img {
-        width: 90px;
+        width: 140px;
         filter: invert(100%);
+        /*invert function of css is used for removing the background color of logo*/
     }
 
     .left div {
         text-align: center;
+        font-size: 26px;
+        padding: 6px;
+        margin: 3px 9px;
+        line-height: 0px;
     }
 
     .mid {
-        border: 2px solid rgb(16, 165, 16);
+        /* border: 2px solid rgb(16, 165, 16); */
 
         display: block;
-        width: 70%;
-        margin: 12px 341px;
+
         /* if we want to move any div using margin: 2px auto then we havw to follow three conditions 1. display:block ; 2. width: according to you. 3. margin auto*/
+
+        width: 75%;
+        margin: 8px 275px;
         padding: 4px;
 
     }
@@ -74,12 +83,12 @@
         top: 20px;
         /*these three point is used for move this div to the right*/
 
-        border: 2px solid yellow;
+        /* border: 2px solid yellow; */
         margin: 2px 2px;
         padding: 4px;
     }
 
-    .navbar {}
+
 
     .navbar li {
 
@@ -95,18 +104,60 @@
         text-decoration: none;
     }
 
-    .navbar li a:hover,
-    .navbar li a:active {
+    .navbar li a:hover .navbar li a:active {
 
         color: blue;
+        background-color: rgba(32, 180, 39, 0.835);
     }
 
     .btn {
         margin: 0px 9px;
         padding: 4px 5px;
         color: white;
-        border-radius: 10px;
-        background-color: black;
+        border-radius: 8px;
+        background-color: darkred;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgba(32, 180, 39, 0.835);
+    }
+
+    .container {
+        /* border: 2px solid chartreuse; */
+    margin: 96px -22px;
+    width: 54%;
+    padding: 66px 61px;
+    border-radius: 66px;
+    }
+    .formGroup input{
+        text-align: center;
+    display: block;
+    border: 2px solid black;
+    width: 67%;
+    margin: 11px auto;
+    border-radius: 15px;
+    padding: 13px;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
+    }
+
+  
+.formGroup button {
+    border: 2px solid black;
+    display: block;
+    width: 72%;
+    margin: 14px auto;
+    padding: 15px 9px;
+    font-size: 18px;
+    background-color: darkred;
+    border-radius: 15px;
+    }
+.formGroup button:hover{
+    background-color: rgba(32, 180, 39, 0.835);}
+
+    .container h1{
+        text-align: center;
     }
 </style>
 
@@ -121,7 +172,7 @@
         <!-- leftbox for logo -->
         <div class="left">
             <!-- <p>Left</p> -->
-            <img src="img/logo.png" alt="Logo">
+            <img src="img/gym-logo.jpg" alt="Logo">
             <div>RS Fitness</div>
 
         </div>
@@ -150,6 +201,31 @@
         </div>
     </header>
     <!-- </div> -->
+
+    <div class="container">
+        <h1>Join The Best Gym in Khulna</h1>
+        <form action="noaction.php">
+            <div class="formGroup">
+                <input type="text " name="" placeholder="Enter Your Name">
+            </div>
+            <div class="formGroup">
+                <input type="text " name="" placeholder="Enter Your Age">
+            </div>
+            <div class="formGroup">
+                <input type="text " name="" placeholder="Enter Your Gender">
+            </div>
+            <div class="formGroup">
+                <input type="text " name="" placeholder="Enter Your Email">
+            </div>
+            <div class="formGroup">
+                <input type="text " name="" placeholder="Enter Your Contact Number">
+            </div>
+            <div class="formGroup">
+                <button class="btn">Submit</button>
+            </div>
+            
+        </form>
+    </div>
 </body>
 
 </html>
